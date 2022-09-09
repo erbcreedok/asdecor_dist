@@ -232,11 +232,10 @@ pre {
 /* Demo Page styles */
 body {
   background: #fff;
-  background-image: url("./images/design/main_bg.png");
+  background-image: url("./images/design/main_bg.jpg");
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 80px;
   color: #000;
   font-family: "DINP-R", arial, serif;
   font-size: 1em;
