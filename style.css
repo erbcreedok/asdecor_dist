@@ -289,6 +289,22 @@ body {
   justify-content: center;
 }
 
+.section__youtube {
+  padding-top: 56.17021276595745%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.section__youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
 .section__instagram-list ul {
   margin: 0;
   padding: 0;
