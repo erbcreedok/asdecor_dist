@@ -1,6 +1,5 @@
 <?php
-function parseLinks($str): array
-{
+function parseLinks($str){
     $links = explode("\n", $str);
 
     $mapValues = function ($value) {
@@ -15,15 +14,13 @@ function parseLinks($str): array
     return array_map($mapValues, array_filter($links));
 }
 
-function parseImages($str): array
-{
+function parseImages($str){
     $images = explode(",", $str);
 
     return array_filter(array_map('trim', $images));
 }
 
-function parseFilials($str): array
-{
+function parseFilials($str){
     $socials = explode("\n", $str);
 
     $mapValues = function ($value) {
