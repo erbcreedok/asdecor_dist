@@ -34,3 +34,8 @@ function parseFilials($str){
 
     return array_map($mapValues, array_filter($socials));
 }
+
+function parseDescription($str) {
+    $order   = array("\r\n", "\n", "\r");
+    return str_replace($order, '<br />', $str);
+}

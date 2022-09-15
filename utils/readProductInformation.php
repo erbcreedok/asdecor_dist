@@ -16,11 +16,10 @@ function readProductInformation($pFile, $productId){
                     'category' => $lineArray[3],
                     'price' => $lineArray[4],
                     'old_price' => $lineArray[5],
-                    'description' => $lineArray[6],
+                    'description' => parseDescription($lineArray[6]),
                     'images' => parseImages($lineArray[7]),
-                    'characteristics' => $lineArray[9],
+                    'characteristics' => parseDescription($lineArray[9]),
                     'shortDescription' => $lineArray[10],
-
                 );
                 error_log(json_encode($product));
                 break;
