@@ -42,24 +42,14 @@ $images = ['https://images.satu.kz/157800228_w640_h640_slivki-naturalnye-mila.jp
 </div>
 <?php else: ?>
     <div class="container-sm my-3">
-        <div class="product-code">
-            Артикул: <?=$product['code']?>
-        </div>
-        <h1 class="product-title">
-            <?=$product['title']?>
-        </h1>
-    </div>
-    <div class="container-sm my-3">
-        <div class="d-flex w-100">
-            <div class="product-prices">
-                <?php if ($product['code']): ?>
-                <div class="product-old_price">
-                    <?=$product['old_price']?>
+        <div class="d-flex w-100 align-items-end">
+            <div>
+                <div class="product-code">
+                    Артикул: <?=$product['code']?>
                 </div>
-                <?php endif; ?>
-                <div class="product-price">
-                    <?=$product['price']?>
-                </div>
+                <h1 class="product-title">
+                    <?=$product['title']?>
+                </h1>
             </div>
             <?php if ($product['more_link']): ?>
                 <a href="<?=$product['more_link']?>" target="_blank" class="base_link ml-auto">
@@ -69,8 +59,20 @@ $images = ['https://images.satu.kz/157800228_w640_h640_slivki-naturalnye-mila.jp
         </div>
     </div>
     <div class="container-sm my-3">
+        <div class="product-prices">
+            <?php if ($product['code']): ?>
+            <div class="product-old_price">
+                <?=$product['old_price']?>
+            </div>
+            <?php endif; ?>
+            <div class="product-price">
+                <?=$product['price']?>
+            </div>
+        </div>
+    </div>
+    <div class="container-sm my-3">
         <?php if (count($product['images']) > 0): ?>
-            <div class="section__carousel">
+            <div class="image-carousel">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <?php foreach($product['images'] as $key=>$value): ?>
