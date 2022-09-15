@@ -20,6 +20,7 @@ function readProductInformation($pFile, $productId){
                     'images' => parseImages($lineArray[7]),
                     'characteristics' => parseDescription($lineArray[9]),
                     'shortDescription' => $lineArray[10],
+                    'more_link' => $lineArray[11],
                 );
                 error_log(json_encode($product));
                 break;

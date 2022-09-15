@@ -398,13 +398,15 @@ body {
 
 header {
   position: sticky;
-  height: 40px;
+  height: 50px;
   background: white;
   box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
   display: flex;
 }
-header .container {
+header .container-sm {
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 header img {
   height: 40px;
@@ -447,4 +449,12 @@ header img {
 }
 .product-description {
   white-space: normal;
+}
+
+.base_link {
+  color: inherit;
+  text-decoration: inherit;
+}
+.ml-auto {
+  margin-left: auto;
 }

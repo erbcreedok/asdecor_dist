@@ -31,7 +31,9 @@ $images = ['https://images.satu.kz/157800228_w640_h640_slivki-naturalnye-mila.jp
 <body>
 <header>
     <div class="container-sm">
-        <img src="images/content/asdecor_logo.jpg" alt="Asdecor.kz">
+        <a href="https://asdecor.kz" class="base_link">
+            <img src="images/content/logo.jpg" alt="Asdecor.kz">
+        </a>
     </div>
 </header>
 <?php if (!$product): ?>
@@ -47,14 +49,23 @@ $images = ['https://images.satu.kz/157800228_w640_h640_slivki-naturalnye-mila.jp
             <?=$product['title']?>
         </h1>
     </div>
-    <div class="container-sm product-prices my-3">
-        <?php if ($product['code']): ?>
-        <div class="product-old_price">
-            <?=$product['old_price']?>
-        </div>
-        <?php endif; ?>
-        <div class="product-price">
-            <?=$product['price']?>
+    <div class="container-sm my-3">
+        <div class="d-flex w-100">
+            <div class="product-prices">
+                <?php if ($product['code']): ?>
+                <div class="product-old_price">
+                    <?=$product['old_price']?>
+                </div>
+                <?php endif; ?>
+                <div class="product-price">
+                    <?=$product['price']?>
+                </div>
+            </div>
+            <?php if ($product['more_link']): ?>
+                <a href="<?=$product['more_link']?>" target="_blank" class="base_link ml-auto">
+                    <button class="btn btn-outline-danger btn-sm">Подробнее</button>
+                </a>
+            <?php endif; ?>
         </div>
     </div>
     <div class="container-sm my-3">
