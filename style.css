@@ -231,17 +231,20 @@ pre {
 */
 /* Demo Page styles */
 body {
-  background: #fff;
-  background-image: url("./images/design/main_bg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: 80px;
   color: #000;
   font-family: "DINP-R", arial, serif;
   font-size: 1em;
 }
 
-.container {
+.background-asdecor {
+  background: #fff;
+  background-image: url("./images/design/main_bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 50px;
+}
+
+.section__list {
   gap: 14px;
   width: 100%;
   display: flex;
@@ -251,24 +254,30 @@ body {
   text-align: center;
   flex-direction: column;
 }
-.container > div {
+.section__list > div {
   text-align: center;
 }
 
 .section-header__logo img {
   width: 95px;
   height: 95px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   border-radius: 50%;
 }
 .section-header__company-name {
   color: #000;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  background: rgba(255,255,255,.3);
+  border-radius: 4px;
 }
 
 .section__main-text {
   color: #fff;
   font-size: 1.1em;
   font-weight: bold;
+  text-shadow: 0 1px 20px rgb(0,0,0,0.69);
 }
 
 .section__whatsapp-links {
@@ -375,7 +384,7 @@ body {
 }
 
 @media (max-width: 840px) {
-  .container {
+  .section__list {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -386,3 +395,56 @@ body {
 @keyframes animation-blink{0%{left:-100%}100%,20%{left:100%;margin-left:5rem}}
 
 /*# sourceMappingURL=style.css.map */
+
+header {
+  position: sticky;
+  height: 40px;
+  background: white;
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
+  display: flex;
+}
+header .container {
+  align-items: center;
+}
+header img {
+  height: 40px;
+}
+.section-heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-image {
+  background: black;
+}
+.product-image img {
+  height: 400px;
+  object-fit: contain;
+}
+.container-sm {
+  max-width: 576px;
+}
+.product-code {
+  color: #343a40;
+  font-size: 12px;
+}
+.product-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.product-prices {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+.product-old_price {
+  color: #8a8baf;
+  text-decoration: line-through;
+  font-size: 16px;
+}
+.product-price {
+  font-weight: bold;
+  font-size: 20px;
+}
+.product-description {
+  white-space: normal;
+}

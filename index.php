@@ -1,13 +1,13 @@
 <?php
 include 'utils/either.php';
-include 'utils/fetchData.php';
+include 'utils/readCityInformation.php';
 include 'utils/dataParsers.php';
 $fileUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8tKS8XyrdIXB-DFPusd_lfYB8b1YapMyDjgB5NezJwc5pt-xqJw-yD17LcKAhg59IZU2n3olUcgYH/pub?output=csv';
 $city = 'astana';
 if (array_key_exists('city', $_GET)) {
     $city = $_GET['city'];
 }
-$info = fsCsvToArray($fileUrl, $city);
+$info = readCityInformation($fileUrl, $city);
 $title = either($info[1], 'Сеть супермаркетов для кондитера №1 в СНГ');
 $description = either($info[2], '«Мы дарим возможность сделать жизнь слаще и вкуснее, предоставляя качественный широкий ассортимент товаров и высокий уровень сервиса.»');
 $links = parseLinks($info[3]);
@@ -42,8 +42,8 @@ $filials = parseFilials($info[12]);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
-    <div class="container">
+  <body class="background-asdecor">
+    <div class="container section__list">
       <div class="section__header">
         <div class="section-header__logo">
           <img src="images/content/asdecor_logo.jpg" alt="Logotype">

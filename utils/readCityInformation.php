@@ -1,5 +1,5 @@
 <?php
-function fsCsvToArray($pFile, $city = 'astana'){
+function readCityInformation($pFile, $city = 'astana'){
     $pDelimiter = ',';
     $arr = [];
     if (($handle = fopen($pFile, 'r')) !== FALSE) {
