@@ -479,6 +479,33 @@ header img {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fd020c'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
+footer {
+  text-align: center;
+  vertical-align: text-bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff0013;
+}
+.burger {
+  display: inline-flex;
+  flex-direction: column;
+  height: 14px;
+  justify-content: space-around;
+  transform: skewX(-20deg);
+  align-items: flex-end;
+  margin-right: 5px;
+}
+
+.burger > div {
+  height: 3px;
+  border-radius: 1px;
+  background-color: #87a51c;
+  width: 12px;
+}
+.burger > div:nth-of-type(2) {
+  width: 14px;
+}
 
 .section-paragraph b {
   font-weight: bold;
