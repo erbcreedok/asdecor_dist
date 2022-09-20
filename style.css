@@ -234,16 +234,13 @@ body {
   color: #000;
   font-family: Roboto, arial, serif;
 }
-.taplink-page {
-  font-family: "DINP-R", arial, serif;
-}
 
 .background-asdecor {
   background: #fff;
   background-image: url("./images/design/main_bg.jpg");
   background-attachment: fixed;
   background-position: center;
-  background-size: 50px;
+  background-size: 110px;
 }
 
 .section__list {
@@ -268,18 +265,14 @@ body {
 }
 .section-header__company-name {
   color: #000;
-  font-weight: bold;
-  padding: 10px;
   display: block;
-  background: rgba(255,255,255,.3);
-  border-radius: 4px;
 }
 
 .section__main-text {
   color: #fff;
   font-size: 1.1em;
-  font-weight: bold;
-  text-shadow: 0 1px 20px rgb(0,0,0,0.69);
+  font-weight: 500;
+  font-style: italic;
 }
 
 .section__whatsapp-links {

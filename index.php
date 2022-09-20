@@ -59,9 +59,7 @@ $filials = parseFilials($info[12]);
 
       <div class="section__whatsapp-links">
           <a href="https://www.asdecor.kz" class="btn-link-custom with-thumb" target="_blank">
-              <figure class="btn-link-custom__thumb">
-                  <i class="bi bi-basket"></i>
-              </figure>
+              <figure><svg data-mode="stroke" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" stroke-width="1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10l5-6 5 6"></path><path d="M21 10l-2 8a2 2.5 0 0 1-2 2H7a2 2.5 0 0 1-2-2l-2-8z"></path><circle cx="12" cy="15" r="2"></circle></svg></figure>
               <div class="btn-link-custom__content">
                   <div class="btn-link-custom__title">
                       www.asdecor.kz
@@ -73,9 +71,7 @@ $filials = parseFilials($info[12]);
           </a>
           <?php foreach($links as $key=>$value): ?>
               <a href="<?=$value['link']?>" class="btn-link-custom with-thumb has-animation-blink" target="_blank">
-                  <figure class="btn-link-custom__thumb">
-                      <i class="bi bi-whatsapp"></i>
-                  </figure>
+                  <figure><svg data-mode="stroke" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" stroke-width="1" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path></svg></figure>
                   <div class="btn-link-custom__content">
                       <div class="btn-link-custom__title">
                           <?=$value['address']?>
