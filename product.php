@@ -41,36 +41,8 @@ $images = ['https://images.satu.kz/157800228_w640_h640_slivki-naturalnye-mila.jp
     <h1 class="product-title">Продукт не найден</h1>
 </div>
 <?php else: ?>
-    <div class="container-sm my-3">
-        <div class="d-flex w-100 align-items-end">
-            <div>
-                <div class="product-code">
-                    Артикул: <?=$product['code']?>
-                </div>
-                <h1 class="product-title">
-                    <?=$product['title']?>
-                </h1>
-            </div>
-            <?php if ($product['more_link']): ?>
-                <a href="<?=$product['more_link']?>" target="_blank" class="base_link ml-auto">
-                    <button class="btn btn-outline-danger btn-sm">Подробнее</button>
-                </a>
-            <?php endif; ?>
-        </div>
-    </div>
-    <div class="container-sm my-3">
-        <div class="product-prices">
-            <?php if ($product['code']): ?>
-            <div class="product-old_price">
-                <?=$product['old_price']?>
-            </div>
-            <?php endif; ?>
-            <div class="product-price">
-                <?=$product['price']?>
-            </div>
-        </div>
-    </div>
-    <div class="container-sm my-3">
+
+    <div class="container-sm mt-3">
         <?php if (count($product['images']) > 0): ?>
             <div class="image-carousel">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -100,20 +72,77 @@ $images = ['https://images.satu.kz/157800228_w640_h640_slivki-naturalnye-mila.jp
             </div>
         <?php endif; ?>
     </div>
+    <div class="container-sm my-1">
+        <div class="d-flex w-100 align-items-start">
+            <div class="product-code">
+                Артикул: <?=$product['code']?>
+                <br>
+            </div>
+            <?php if ($product['more_link']): ?>
+                <a href="<?=$product['more_link']?>" target="_blank" class="base_link ml-auto">
+                    <button class="btn btn-outline-danger btn-xs">Подробнее
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
+                    </svg></button>
+                </a>
+            <?php endif; ?>
+        </div>
+    </div>
+    <div class="container-sm my-2">
+        <h1 class="product-title">
+            <?=$product['title']?>
+        </h1>
+    </div>
+    <?php if ($product['price']): ?>
+    <div class="container-sm my-2">
+        <div class="product-prices">
+            <?php if ($product['old_price']): ?>
+            <div class="product-old_price">
+                <?=$product['old_price']?>
+            </div>
+            <?php endif; ?>
+            <div class="product-price">
+                <?=$product['price']?>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
 
-    <div class="container-sm my-3">
-        <h4 class="section-heading mb-2">О товаре:</h4>
-        <p class="product-description">
+    <?php if ($product['description']): ?>
+    <div class="container-sm my-2">
+        <h4 class="section-heading">Описание:</h4>
+        <p class="section-paragraph">
             <?=$product['description']?>
         </p>
     </div>
+    <?php endif; ?>
 
-    <div class="container-sm my-3">
-        <h4 class="section-heading mb-2">Характеристики:</h4>
-        <p class="product-description">
+    <?php if ($product['advantages']): ?>
+    <div class="container-sm my-2">
+        <h4 class="section-heading">Преимущества:</h4>
+        <p class="section-paragraph">
+            <?=$product['advantages']?>
+        </p>
+    </div>
+    <?php endif; ?>
+
+    <?php if ($product['characteristics']): ?>
+    <div class="container-sm my-2">
+        <h4 class="section-heading">Характеристики:</h4>
+        <p class="section-paragraph">
             <?=$product['characteristics']?>
         </p>
     </div>
+    <?php endif; ?>
+
+    <?php if ($product['additional']): ?>
+    <div class="container-sm my-2">
+        <p class="section-paragraph">
+            <?=$product['additional']?>
+        </p>
+    </div>
+    <?php endif; ?>
+
 <?php endif; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

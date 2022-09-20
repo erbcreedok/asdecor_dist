@@ -12,15 +12,17 @@ function readProductInformation($pFile, $productId){
             if ($lineArray[0] == $productId) {
                 $product = array(
                     'code' => $lineArray[0],
-                    'title' => $lineArray[2],
-                    'category' => $lineArray[3],
-                    'price' => $lineArray[4],
-                    'old_price' => $lineArray[5],
-                    'description' => parseDescription($lineArray[6]),
+                    'title' => $lineArray[1],
+                    'category' => $lineArray[2],
+                    'price' => $lineArray[3],
+                    'old_price' => $lineArray[4],
+                    'description' => parseDescription($lineArray[5]),
+                    'shortDescription' => $lineArray[6],
                     'images' => parseImages($lineArray[7]),
-                    'characteristics' => parseDescription($lineArray[9]),
-                    'shortDescription' => $lineArray[10],
-                    'more_link' => $lineArray[11],
+                    'more_link' => $lineArray[8],
+                    'advantages' => parseDescription($lineArray[9]),
+                    'characteristics' => parseDescription($lineArray[10]),
+                    'additional' => parseDescription($lineArray[11]),
                 );
                 error_log(json_encode($product));
                 break;

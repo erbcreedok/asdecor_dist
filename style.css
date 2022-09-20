@@ -1,4 +1,4 @@
-/* By Athlon Front-End Team */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /* By Athlon Front-End Team */
 /* Core variables */
 /**
  * Variables
@@ -215,7 +215,7 @@ pre {
  * Fonts
 */
 @font-face {
-  font-family: "Roboto";
+  font-family: "DINP-R";
   src: url("./fonts/DINPro-Regular.eot?") format("eot"), url("./fonts/DINPro-Regular.woff") format("woff"), url("./fonts/DINPro-Regular.ttf") format("truetype");
   font-style: normal;
 }
@@ -232,8 +232,10 @@ pre {
 /* Demo Page styles */
 body {
   color: #000;
+  font-family: Roboto, arial, serif;
+}
+.taplink-page {
   font-family: "DINP-R", arial, serif;
-  font-size: 1em;
 }
 
 .background-asdecor {
@@ -412,11 +414,14 @@ header img {
   height: 40px;
 }
 .section-heading {
-  font-size: 20px;
-  font-weight: bold;
+  color: #9a9a9a;
+}
+.section-paragraph {
+  font-size: 14px;
 }
 .product-image {
-  background: #f0f0f0;
+  background: white;
+  border: 1px solid #a6a6a6;
 }
 .product-image img {
   height: 200px;
@@ -426,12 +431,12 @@ header img {
   max-width: 576px;
 }
 .product-code {
-  color: #343a40;
+  color: #9a9a9a;
   font-size: 12px;
 }
 .product-title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
 }
 .product-prices {
   display: flex;
@@ -447,10 +452,13 @@ header img {
   font-weight: bold;
   font-size: 20px;
 }
-.product-description {
-  white-space: normal;
+.btn-xs {
+  padding: 2px 4px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
-
 .base_link {
   color: inherit;
   text-decoration: inherit;
@@ -462,11 +470,25 @@ header img {
   overflow: hidden;
 }
 .image-carousel .carousel-item {
-  border-radius: 20px;
+  border-radius: 0;
 }
 .image-carousel .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fd020c'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
 }
 .image-carousel .carousel-control-next-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fd020c'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+
+.section-paragraph b {
+  font-weight: bold;
+}
+.section-paragraph i {
+  font-style: italic;
+}
+.section-paragraph title {
+  display: inline;
+  font-weight: inherit;
+  color: #9a9a9a;
+  font-size: 16px;
 }

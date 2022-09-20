@@ -42,7 +42,7 @@ $filials = parseFilials($info[12]);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css">
   </head>
-  <body class="background-asdecor">
+  <body class="taplink-page background-asdecor">
     <div class="container section__list">
       <div class="section__header">
         <div class="section-header__logo">
