@@ -231,16 +231,29 @@ pre {
 */
 /* Demo Page styles */
 body {
-  color: #000;
+  color: #343a40;
+	background: none;
   font-family: Roboto, arial, serif;
 }
 
-.background-asdecor {
-  background: #fff;
-  background-image: url("./images/design/main_bg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: 110px;
+.background-asdecor::before {
+	content: " ";
+	display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background-color: #bcbcbc;
+	background-image: url("./images/design/main_bg.jpg");
+	background-size: 65px;
+    background-position: 50% 50%;
+	z-index: -2;
+}
+@media (min-width: 768px) {
+	.background-asdecor::before  {
+		  background-size: 110px;
+	}
 }
 
 .section__list {
@@ -264,7 +277,7 @@ body {
   border-radius: 50%;
 }
 .section-header__company-name {
-  color: #000;
+  color: #343a40;
   display: block;
 }
 
@@ -273,6 +286,14 @@ body {
   font-size: 1.1em;
   font-weight: 500;
   font-style: italic;
+}
+
+.section__main-bordered {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10%;
 }
 
 .section__whatsapp-links {
@@ -318,7 +339,7 @@ body {
   list-style-type: none;
 }
 .section__instagram-list ul li a {
-  color: #000;
+  color: #343a40;
 }
 .section__instagram-list ul li a:hover {
   text-decoration: underline;
@@ -343,9 +364,9 @@ body {
 
 .btn-link-custom {
   gap: 6px;
-  color: #000;
+  color: #343a40;
   display: flex;
-  padding: 10px;
+  padding: 6px 10px;
   cursor: pointer;
   line-height: 1.2;
   align-items: center;
@@ -355,7 +376,7 @@ body {
   backdrop-filter: saturate(120%) blur(3px);
 }
 .btn-link-custom:hover {
-  color: #000;
+  color: #343a40;
 }
 .btn-link-custom__thumb {
   padding: 3px;
@@ -463,7 +484,7 @@ header img {
   overflow: hidden;
 }
 .image-carousel .carousel-item {
-  border-radius: 0;
+  border-radius: 5px;
 }
 .image-carousel .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fd020c'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
@@ -478,7 +499,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ff0013;
+  color: rgb(217,39,46);
 }
 .burger {
   display: inline-flex;
@@ -493,7 +514,7 @@ footer {
 .burger > div {
   height: 3px;
   border-radius: 1px;
-  background-color: #87a51c;
+  background-color: rgb(185,163,85);
   width: 12px;
 }
 .burger > div:nth-of-type(2) {
